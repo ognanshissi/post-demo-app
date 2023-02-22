@@ -1,0 +1,12 @@
+<div class="post-container">
+  <div class="post-title">{{ post.title | titlecase }}</div>
+  <div class="post-body">{{ post.body }}</div>
+
+  <br/>
+  <button class="btn" (click)="loadComments()">Voir les commentaires</button>
+
+  <div *ngIf="comments">
+    <br/>
+    <div *ngFor="let comment of comments" >{{ comment.body }} <br/> <br/></div>
+  </div>
+</div>

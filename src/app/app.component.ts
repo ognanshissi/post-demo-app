@@ -1,3 +1,5 @@
+import { ArticleService } from './core/services/article.service';
+import { inject } from '@angular/core';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +8,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'test-demo';
+  title = 'Blog post';
+
+  pageIndex = 0;
+  pageElement = 10;
+
+  private _postService = inject(ArticleService);
+
+  postList$ = this._postService.articleList$;
+
+  loadMore() {
+    const page = this.pageIndex + 1;
+    this.pageElement;
+
+    // loadMoore
+  }
 }
