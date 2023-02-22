@@ -7,6 +7,6 @@
 
   <div *ngIf="comments">
     <br/>
-    <div *ngFor="let comment of comments" >{{ comment.body }} <br/> <br/></div>
+    <li *ngFor="let comment of comments" >{{ comment.body }} <br/> <br/></li>
   </div>
 </div>
